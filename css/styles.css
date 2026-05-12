@@ -399,9 +399,11 @@ section { padding: 6rem 2.5rem; }
 .featured-preview {
   background: #F7F3EE;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 1.75rem;
+  cursor: pointer;
 }
 
 .app-mockup {
@@ -528,13 +530,13 @@ section { padding: 6rem 2.5rem; }
   border-radius: 0 4px 4px 0;
 }
 
-/* ── Screenshot inside browser chrome ───────────────────── */
-.mockup-screenshot {
+/* ── Autoplay video preview inside browser chrome ────────── */
+.mockup-video {
   overflow: hidden;
-  line-height: 0; /* remove inline whitespace under img */
+  line-height: 0;
 }
 
-.mockup-screenshot img {
+.mockup-video .preview-video {
   width: 100%;
   display: block;
   object-fit: cover;
@@ -542,14 +544,43 @@ section { padding: 6rem 2.5rem; }
   max-height: 260px;
 }
 
-/* ── Watch Demo button styled as link ────────────────────── */
-.project-link--btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-family: var(--font-sans);
+/* ── Preview panel: hover lift ───────────────────────────── */
+.featured-preview .app-mockup {
+  transition: box-shadow 0.25s, transform 0.25s;
 }
+
+.featured-preview:hover .app-mockup {
+  box-shadow: 0 8px 32px rgba(60,40,20,.16);
+  transform: translateY(-2px);
+}
+
+/* ── "Click to watch demo" hint ──────────────────────────── */
+.preview-hint {
+  margin-top: 0.55rem;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+/* ── Try GTM Copilot CTA ─────────────────────────────────── */
+.btn-try-copilot {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--black);
+  text-decoration: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-try-copilot:hover { background: #333; transform: translateY(-1px); }
+.btn-try-copilot .arrow { transition: transform 0.2s; }
+.btn-try-copilot:hover .arrow { transform: translateX(3px); }
 
 /* ── Video modal ─────────────────────────────────────────── */
 .video-modal {

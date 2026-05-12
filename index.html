@@ -138,22 +138,14 @@
                 </div>
               </div>
               <div class="project-footer">
-                <span class="project-status">
-                  <span class="status-dot live"></span> Live
-                </span>
-                <div class="project-links">
-                  <a href="https://gtm-copilot-gray.vercel.app" target="_blank" rel="noopener" class="project-link">
-                    View Live <span class="arrow">→</span>
-                  </a>
-                  <button class="project-link project-link--btn" id="watchDemoBtn">
-                    Watch Demo <span class="arrow">→</span>
-                  </button>
-                </div>
+                <a href="https://gtm-copilot-gray.vercel.app" target="_blank" rel="noopener" class="btn-try-copilot">
+                  Try GTM Copilot <span class="arrow">→</span>
+                </a>
               </div>
             </div>
 
-            <!-- Right: app screenshot in browser chrome -->
-            <div class="featured-preview">
+            <!-- Right: autoplay silent video preview -->
+            <div class="featured-preview" id="previewClickTarget" title="Click to watch demo">
               <div class="app-mockup">
                 <div class="mockup-bar">
                   <span class="mockup-dot mockup-dot--red"></span>
@@ -161,10 +153,13 @@
                   <span class="mockup-dot mockup-dot--green"></span>
                   <span class="mockup-url">gtm-copilot-gray.vercel.app</span>
                 </div>
-                <div class="mockup-screenshot">
-                  <img src="images/gtm-copilot-preview.png" alt="GTM Copilot showing company snapshot results for Salesforce" />
+                <div class="mockup-video">
+                  <video class="preview-video" id="previewVideo" autoplay muted loop playsinline>
+                    <source src="videos/GTM_Copilot_Tutorial.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
+              <p class="preview-hint">▶ Click to watch demo</p>
             </div>
 
           </div>
