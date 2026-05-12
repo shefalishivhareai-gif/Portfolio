@@ -377,7 +377,7 @@ section { padding: 6rem 2.5rem; }
 
 .featured-text .project-tag   { margin-bottom: 1rem; }
 .featured-text h3              { margin-bottom: 0.65rem; }
-.featured-text p               { margin-bottom: 1.25rem; flex: unset; }
+.featured-text p               { margin-bottom: 1.25rem; flex: unset; text-decoration: none; }
 .featured-text .project-tools  { margin-bottom: 0; }
 
 .featured-text .project-footer {
@@ -532,6 +532,7 @@ section { padding: 6rem 2.5rem; }
 
 /* ── Autoplay video preview inside browser chrome ────────── */
 .mockup-video {
+  position: relative;
   overflow: hidden;
   line-height: 0;
 }
@@ -554,33 +555,23 @@ section { padding: 6rem 2.5rem; }
   transform: translateY(-2px);
 }
 
-/* ── "Click to watch demo" hint ──────────────────────────── */
+/* ── "Click to watch demo" overlay hint ─────────────────── */
 .preview-hint {
-  margin-top: 0.55rem;
-  font-size: 0.72rem;
-  color: var(--muted);
-  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.52);
+  padding: 0.28rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
   letter-spacing: 0.04em;
+  pointer-events: none; /* clicks pass through to parent */
+  line-height: 1.4;
 }
-
-/* ── Try GTM Copilot CTA ─────────────────────────────────── */
-.btn-try-copilot {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--white);
-  background: var(--black);
-  text-decoration: none;
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-  letter-spacing: 0.02em;
-  transition: background 0.2s, transform 0.15s;
-}
-.btn-try-copilot:hover { background: #333; transform: translateY(-1px); }
-.btn-try-copilot .arrow { transition: transform 0.2s; }
-.btn-try-copilot:hover .arrow { transform: translateX(3px); }
 
 /* ── Video modal ─────────────────────────────────────────── */
 .video-modal {
