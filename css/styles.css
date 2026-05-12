@@ -301,6 +301,11 @@ section { padding: 6rem 2.5rem; }
   margin-bottom: 1.5rem;
   flex: 1;
 }
+.project-card p a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none;
+}
 .project-tools {
   display: flex;
   flex-wrap: wrap;
