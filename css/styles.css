@@ -352,19 +352,187 @@ section { padding: 6rem 2.5rem; }
 .project-link .arrow { transition: transform 0.2s; }
 .project-link:hover .arrow { transform: translateX(3px); }
 
-.project-video {
-  margin-top: 1rem;
-  border-radius: 8px;
+/* ── Featured card ───────────────────────────────────────── */
+.project-card--featured {
+  grid-column: 1 / -1;
+  padding: 0;
   overflow: hidden;
-  border: 1px solid var(--border, #e8e0d5);
-  background: #000;
 }
 
-.project-video video {
-  display: block;
+.featured-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 340px;
+}
+
+.featured-text {
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid var(--border);
+}
+
+.featured-text-top { display: flex; flex-direction: column; }
+
+.featured-text .project-tag   { margin-bottom: 1rem; }
+.featured-text h3              { margin-bottom: 0.65rem; }
+.featured-text p               { margin-bottom: 1.25rem; flex: unset; }
+.featured-text .project-tools  { margin-bottom: 0; }
+
+.featured-text .project-footer {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* ── App mockup ──────────────────────────────────────────── */
+.featured-preview {
+  background: #F7F3EE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.75rem;
+}
+
+.app-mockup {
   width: 100%;
-  max-height: 220px;
-  object-fit: cover;
+  background: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 24px rgba(60,40,20,.09);
+  overflow: hidden;
+}
+
+.mockup-bar {
+  background: #F2EDE8;
+  border-bottom: 1px solid var(--border);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mockup-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.mockup-dot--red    { background: #F08080; }
+.mockup-dot--yellow { background: #E8C84A; }
+.mockup-dot--green  { background: #6BB870; }
+
+.mockup-url {
+  flex: 1;
+  margin-left: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 0.6rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mockup-body {
+  padding: 14px;
+  background: #FAF8F5;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mockup-header {
+  height: 18px;
+  width: 38%;
+  background: #E8E0D5;
+  border-radius: 4px;
+}
+
+.mockup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mockup-field {
+  height: 22px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.mockup-btn {
+  height: 22px;
+  width: 100%;
+  background: #1E1B18;
+  border-radius: 20px;
+  margin-top: 2px;
+}
+
+.mockup-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.mockup-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mockup-card--full { grid-column: 1 / -1; }
+
+.mockup-card-head {
+  height: 6px;
+  width: 45%;
+  background: #E8E0D5;
+  border-radius: 3px;
+  margin-bottom: 2px;
+}
+
+.mockup-line {
+  height: 4px;
+  background: #F0EAE2;
+  border-radius: 2px;
+}
+.mockup-line--40 { width: 40%; }
+.mockup-line--50 { width: 50%; }
+.mockup-line--60 { width: 60%; }
+.mockup-line--70 { width: 70%; }
+.mockup-line--80 { width: 80%; }
+
+.mockup-accent-line {
+  height: 22px;
+  background: #F5EDE3;
+  border-left: 3px solid #C4956A;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ── Responsive: featured card stacks on mobile ──────────── */
+@media (max-width: 700px) {
+  .featured-body { grid-template-columns: 1fr; }
+  .featured-text { border-right: none; border-bottom: 1px solid var(--border); }
+  .featured-preview { padding: 1.5rem; }
 }
 
 /* ===== CONTACT ===== */
