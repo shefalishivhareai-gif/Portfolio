@@ -145,14 +145,14 @@
                   <a href="https://gtm-copilot-gray.vercel.app" target="_blank" rel="noopener" class="project-link">
                     View Live <span class="arrow">→</span>
                   </a>
-                  <a href="https://www.loom.com/share/679fbfd015c748c6ab686db024ca2c01" target="_blank" rel="noopener" class="project-link">
+                  <button class="project-link project-link--btn" id="watchDemoBtn">
                     Watch Demo <span class="arrow">→</span>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <!-- Right: app mockup -->
+            <!-- Right: app screenshot in browser chrome -->
             <div class="featured-preview">
               <div class="app-mockup">
                 <div class="mockup-bar">
@@ -161,33 +161,8 @@
                   <span class="mockup-dot mockup-dot--green"></span>
                   <span class="mockup-url">gtm-copilot-gray.vercel.app</span>
                 </div>
-                <div class="mockup-body">
-                  <div class="mockup-header"></div>
-                  <div class="mockup-inputs">
-                    <div class="mockup-field"></div>
-                    <div class="mockup-field"></div>
-                    <div class="mockup-btn"></div>
-                  </div>
-                  <div class="mockup-cards">
-                    <div class="mockup-card mockup-card--full">
-                      <div class="mockup-card-head"></div>
-                      <div class="mockup-line mockup-line--60"></div>
-                      <div class="mockup-line mockup-line--80"></div>
-                      <div class="mockup-line mockup-line--40"></div>
-                    </div>
-                    <div class="mockup-card">
-                      <div class="mockup-card-head"></div>
-                      <div class="mockup-line mockup-line--70"></div>
-                      <div class="mockup-line mockup-line--50"></div>
-                      <div class="mockup-line mockup-line--80"></div>
-                    </div>
-                    <div class="mockup-card">
-                      <div class="mockup-card-head"></div>
-                      <div class="mockup-accent-line"></div>
-                      <div class="mockup-line mockup-line--60"></div>
-                      <div class="mockup-line mockup-line--40"></div>
-                    </div>
-                  </div>
+                <div class="mockup-screenshot">
+                  <img src="images/gtm-copilot-preview.png" alt="GTM Copilot showing company snapshot results for Salesforce" />
                 </div>
               </div>
             </div>
@@ -282,6 +257,17 @@
     <p>© 2026 Shefali Shivhare · Built with Claude Code</p>
   </footer>
 
+
+  <!-- ===================== VIDEO MODAL ===================== -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="GTM Copilot Demo">
+    <div class="video-modal-overlay" id="videoModalOverlay"></div>
+    <div class="video-modal-inner">
+      <button class="video-modal-close" id="videoModalClose" aria-label="Close video">&times;</button>
+      <video class="video-modal-player" id="demoVideo" controls playsinline>
+        <source src="videos/GTM_Copilot_Tutorial.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

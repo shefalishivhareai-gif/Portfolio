@@ -1,3 +1,29 @@
+// ===== VIDEO MODAL =====
+const videoModal       = document.getElementById('videoModal');
+const watchDemoBtn     = document.getElementById('watchDemoBtn');
+const videoModalOverlay = document.getElementById('videoModalOverlay');
+const videoModalClose  = document.getElementById('videoModalClose');
+const demoVideo        = document.getElementById('demoVideo');
+
+function openVideoModal() {
+  videoModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal() {
+  videoModal.classList.remove('open');
+  if (demoVideo) { demoVideo.pause(); }
+  document.body.style.overflow = '';
+}
+
+if (watchDemoBtn)     { watchDemoBtn.addEventListener('click', openVideoModal); }
+if (videoModalOverlay){ videoModalOverlay.addEventListener('click', closeVideoModal); }
+if (videoModalClose)  { videoModalClose.addEventListener('click', closeVideoModal); }
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && videoModal.classList.contains('open')) closeVideoModal();
+});
+
 // ===== NAV: Add shadow on scroll =====
 const nav = document.querySelector('nav');
 window.addEventListener('scroll', () => {
