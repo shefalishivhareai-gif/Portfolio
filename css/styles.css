@@ -551,6 +551,19 @@ section { padding: 6rem 2.5rem; }
   max-height: 260px;
 }
 
+.mockup-screen {
+  overflow: hidden;
+  line-height: 0;
+}
+
+.mockup-screen img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+  max-height: 260px;
+}
+
 /* ── Preview panel: hover lift ───────────────────────────── */
 .featured-preview .app-mockup {
   transition: box-shadow 0.25s, transform 0.25s;

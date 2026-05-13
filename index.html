@@ -147,8 +147,8 @@
               </div>
             </div>
 
-            <!-- Right: autoplay silent video preview -->
-            <div class="featured-preview" id="previewClickTarget" title="Click to watch demo">
+            <!-- Right: static app screenshot -->
+            <div class="featured-preview">
               <div class="app-mockup">
                 <div class="mockup-bar">
                   <span class="mockup-dot mockup-dot--red"></span>
@@ -156,11 +156,8 @@
                   <span class="mockup-dot mockup-dot--green"></span>
                   <span class="mockup-url">gtm-copilot-gray.vercel.app</span>
                 </div>
-                <div class="mockup-video">
-                  <video class="preview-video" id="previewVideo" autoplay muted loop playsinline>
-                    <source src="videos/GTM_Copilot_Tutorial.mp4" type="video/mp4" />
-                  </video>
-                  <span class="preview-hint">▶ Click to watch demo</span>
+                <div class="mockup-screen">
+                  <img src="images/gtm-copilot-preview.png" alt="GTM Copilot App Screenshot" />
                 </div>
               </div>
             </div>
@@ -256,16 +253,6 @@
   </footer>
 
 
-  <!-- ===================== VIDEO MODAL ===================== -->
-  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="GTM Copilot Demo">
-    <div class="video-modal-overlay" id="videoModalOverlay"></div>
-    <div class="video-modal-inner">
-      <button class="video-modal-close" id="videoModalClose" aria-label="Close video">&times;</button>
-      <video class="video-modal-player" id="demoVideo" controls playsinline>
-        <source src="videos/GTM_Copilot_Tutorial.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </div>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
