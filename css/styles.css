@@ -351,6 +351,7 @@ section { padding: 6rem 2.5rem; }
   display: inline-block;
 }
 .status-dot.live { background: #6BB870; }
+.status-dot.wip  { background: #F0A500; }
 
 .project-link {
   display: inline-flex;
